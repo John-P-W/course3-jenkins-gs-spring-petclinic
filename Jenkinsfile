@@ -13,23 +13,6 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
-        stage('Parallel Tests') {
-          parallel {
-            stage('testsA') {
-                steps {
-                  echo "test set A"
-                  sleep 2
-                  sleep 4
-                }
-            }
-            stage("testsB") {
-              steps {    
-                echo "test set B"
-                sleep 3
-              }
-            }
-          }
-        }
         stage('capture') {
             steps {
                 echo 'Capturing results...'
