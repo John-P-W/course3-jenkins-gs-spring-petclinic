@@ -7,12 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('checkout') {
-            steps {
-                git url: 'https://github.com/John-P-W/course3-jenkins-gs-spring-petclinic', branch: 'main'
-            }
-        }
-
         stage('build') {
             steps {
                 echo 'Building...'
